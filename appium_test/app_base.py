@@ -16,6 +16,7 @@ class Base():
         desired_caps['noReset'] = True  # 使用app的缓存
         desired_caps['skipDeviceInitialization'] = True  # 跳过设备初始化
         # desired_caps['autoLaunch'] = False # 直接使用打开的app进行测试
+        # desired_caps['settings[settingsKey]'] = 0  # 动态元素查找的最大等待时间
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
         self.driver.implicitly_wait(5)
 
